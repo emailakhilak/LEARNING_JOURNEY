@@ -1,51 +1,162 @@
-DAy1- Introduction to Langchain 07-07-2026
+# Day 1 - Introduction to LangChain
+**Date:** 07-07-2026
 
-Langchain is an opensource framework for developing application powered by llm
+## What is LangChain?
 
-Benifits -> handles workflow pippeline(one component output is the input of another - this can be done automatically) -> componets with many variations are available -> Easy shifing between componets -> Memory state handling example like the way the chatgpt can able to remember previous messages
+LangChain is an **open-source framework** for developing applications powered by **Large Language Models (LLMs)**.
 
-What can we build ->Conversational chatbots - helpful for service centers ->AI Agents - helpful to do the works like booking flights ->Summarization - in chatgpt we cannot upload huge info but throught langchain we ca build a chatbot that can take huge info and answers your question
+It helps developers connect different AI components together so they can build complete AI applications instead of just calling an LLM API.
 
-Components of Langchain -> Model - interface to interact with ai models -> Prompts - which is given as input to llms -> chain - pipeline -> Memory - llm APIs are stateless(cannot remember messages from previous apis)can be solved by langchain -> Indexex - 4 main components - Document loader,text splitter,vector store,retrivers - from the chat with pdf application example -> Agents
+---
 
-story time
+# Benefits of LangChain
 
-we want to build a chatbot
+- Handles the entire workflow (pipeline) automatically.
+  - The output of one component becomes the input of the next component.
+- Provides many built-in components with multiple integrations.
+- Makes it easy to switch between different LLMs, vector databases, embedding models, etc.
+- Handles memory so applications can remember previous conversations (LLM APIs are stateless by default).
 
-At first, we face two big problems:
+---
 
-The chatbot should understand what the user is asking (NLU). It should give a correct answer using the available context (context-aware text generation).
+# What Can We Build?
+
+### Conversational Chatbots
+- Customer support bots
+- Service center assistants
+- FAQ bots
+
+### AI Agents
+- Book flights
+- Send emails
+- Search the web
+- Automate repetitive tasks
+
+### Document Chatbots / Summarization
+- Chat with PDFs
+- Summarize large documents
+- Ask questions about uploaded documents
+
+---
+
+# Components of LangChain
+
+## 1. Models
+Interface to interact with AI models like GPT, Gemini, Claude, etc.
+
+## 2. Prompts
+Instructions or input given to the LLM.
+
+## 3. Chains
+A pipeline where the output of one component becomes the input of another.
+
+## 4. Memory
+LLM APIs are **stateless**, meaning they do not remember previous messages.
+
+LangChain provides memory to maintain conversation history.
+
+## 5. Indexes
+Used in Retrieval-Augmented Generation (RAG).
+
+Main components:
+
+- Document Loader
+- Text Splitter
+- Embedding Model
+- Vector Store
+- Retriever
+
+## 6. Agents
+Allow LLMs to decide which tools to use and what actions to perform.
+
+---
+
+# Story Time - Why LangChain Exists
+
+Imagine we want to build a chatbot.
+
+## Step 1: The first challenge
+
+The chatbot should:
+
+- Understand what the user is asking (Natural Language Understanding - NLU)
+- Generate meaningful answers using the given context
 
 For many years, these were difficult problems.
 
-Then LLMs (like GPT) came and solved both of them. Now the chatbot can understand questions and generate good answers.
+Then **LLMs (like GPT)** came and solved both of them.
 
-But a new problem appeared.
+Now chatbots can understand questions and generate intelligent responses.
 
-These LLMs are very large. Running them on our own server needs expensive GPUs, lots of memory, and high maintenance costs.
+---
 
-So instead of hosting the model ourselves, companies like OpenAI provide LLM APIs.
+## Step 2: Another challenge
 
-Now we simply send a request to the API, and it returns the answer. We don't have to manage the model ourselves.
+LLMs are huge.
 
-Again, another problem appeared.
+Running them on our own servers requires:
 
-A chatbot is not just an LLM.
+- Expensive GPUs
+- Large memory
+- High maintenance cost
+
+This problem is solved by **LLM APIs**.
+
+Instead of hosting the model ourselves, we simply send a request to an API (OpenAI, Anthropic, Gemini, etc.) and receive the response.
+
+---
+
+## Step 3: Yet another challenge
+
+A chatbot is **not just an LLM**.
 
 It also needs:
 
-A document loader A text splitter An embedding model A vector database An LLM API Prompt management Memory Retrieval logic
+- Document Loader
+- Text Splitter
+- Embedding Model
+- Vector Database
+- LLM API
+- Prompt Management
+- Memory
+- Retrieval Logic
 
-Connecting all these parts and making them work together is complicated. If we want to switch from OpenAI to Gemini or change the vector database, we may have to modify a lot of code.
+Connecting all these components manually becomes difficult.
 
-Then LangChain came to solve this problem.
+Even switching from one LLM (like OpenAI) to another (like Gemini) may require many code changes.
 
-LangChain acts like a manager. It connects all these components together using a common interface.
+---
+
+## Step 4: LangChain solves this
+
+LangChain acts like a **manager**.
+
+It connects all the components using a common interface.
 
 Because of this:
 
-You write less code. You can change one component (like the LLM or vector database) with only a few changes. You can focus on building your chatbot instead of worrying about connecting everything.
+- Less boilerplate code
+- Easy to switch between LLMs and other components
+- Faster application development
+- Focus on building the product instead of wiring everything together
 
-LLMs solved intelligence. 
-LLM APIs solved hosting. 
-LangChain solved orchestration (connecting everything together).
+---
+
+# Key Takeaway
+
+- LLMs solved **intelligence**.
+- LLM APIs solved **hosting**.
+- LangChain solved **orchestration** (connecting everything together).
+
+---
+
+# What I Learned Today
+
+- What LangChain is
+- Why LangChain is needed
+- Benefits of using LangChain
+- Main components of LangChain
+- How LangChain fits into the LLM application development workflow
+- The story behind why LangChain was created
+
+---
