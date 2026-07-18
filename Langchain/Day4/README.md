@@ -1,6 +1,6 @@
 # Day 4 - Using Hugging Face Models in LangChain
 
-## 📅 Date
+## Date
 15 July 2026
 
 ## Objective
