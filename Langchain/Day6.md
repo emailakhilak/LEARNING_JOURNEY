@@ -1,7 +1,7 @@
-# Day 7 - Stacks and ArrayList
+# Day 6- Stacks and ArrayList
 
 ## 📅 Date
-18 July 2026
+17 July 2026
 
 ## Objective
 

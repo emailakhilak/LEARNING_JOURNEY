@@ -1,5 +1,5 @@
 # Day 1 - Introduction to LangChain
-**Date:** 07-07-2026
+**Date:** 12-07-2026
 
 ## What is LangChain?
 
